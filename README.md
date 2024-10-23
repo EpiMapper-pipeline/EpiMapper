@@ -6,7 +6,7 @@ EpiMapper is a complete pipeline for data analysis of epigenomic sequencing.
 
 ## Download:
 
-Epimapper is written in Python. It can be installed and accessed from command line and is avalible for both linux and macOS. 
+Epimapper is written in Python and can be installed and accessed via the command line. It is available for both Linux and macOS. You can download this pipeline from the [EpiMapper repository](https://github.com/EpiMapper-pipeline/EpiMapper).
 	
 
 ## Installation:
