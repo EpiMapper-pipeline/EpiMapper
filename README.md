@@ -104,7 +104,7 @@ python setup.py install
 
 ## Run demos:
 There are currently two demos avalible for using the EpiMapper Python package, one for CUT&Tag data and one for ATAC-seq data.
-You can find the demo data in the [demos](https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/demos) folder. Please pay attention to create the output folder before running.
+Demo data can be found in the [demos](https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/demos) folder. Ensure that you create the output folder before running the demos.
 
 ```shell
 # Navigate to the demo directory:
