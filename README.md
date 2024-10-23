@@ -44,7 +44,7 @@ conda clean --all --yes
 ```
 
 ### 3. Create the Environment
-You can create the environment using a **.yml** file or a **requirements.txt** file.
+You can create the environment using a `.yml` file or a `requirements.txt` file.
 
 #### 3.1. Use the .yml File 
 ```shell
@@ -113,3 +113,20 @@ cd ../demos/demo_histone/
 # Run the demo script:
 ./demo_histone.sh 
 ```
+
+## Pipeline Tasks:
+	
+The pipeline consists of follwoing tasks. To run a task, type epimapper task args. To see what are the options for each task of the pipeline, please run: epimapper -h
+
+- `fastqc`: Performs quality control on raw FASTQ files from high-throughput sequencing.
+- `bowtie2_alignment`: Maps reads to a reference genome using Bowtie2 for aligning FASTQ sequencing read files from high-throughput sequencing and visualizing results.
+- `remove_duplicates`: Removes duplicated reads mapped to the same place in a reference genome during alignment and visualizes results.
+- `fragment_length`: Evaluates the mapped fragment length distribution of input SAM files exported from high-throughput sequencing alignment and visualizes results.
+- `filtering`: Performs data filtering for mapped reads based on their alignment quality and file format conversion before high-level data analysis, visualizing reproducibility among biological replicates.
+- `spike_in_calibration`: Removes experimental bias by normalizing fragment counts based on sequencing depth to a spike-in genome and visualizes results.
+- `peak_calling`: Finds enriched regions and calls peaks from chromatin profiling data with SEACR or MACS2, then visualizes results.
+- `heatmap`: Visualizes the enrichment of target proteins in predefined genomic regions and peaks by creating heatmaps.
+- `differential_analysis`: Performs differential analysis on enriched regions and peaks before annotating the statistically significant changes to specific genomic regions and visualizing the results.
+
+
+
