@@ -1,13 +1,12 @@
 
-# EpiMapper: A New Tool for Analyzing High Throughput Sequencing from CUT&Tag
+# EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 ## EpiMapper Documentation
 
 EpiMapper is a complete pipeline for data analysis of epigenomic sequencing.
 
 ## Download:
-
 Epimapper is written in Python and can be installed and accessed via the command line. It is available for both Linux and macOS. You can download this pipeline from the [EpiMapper repository](https://github.com/EpiMapper-pipeline/EpiMapper).
-	
+
 
 ## Installation:
 It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use [miniconda/anaconda](https://docs.conda.io/en/latest/miniconda.html). Refer to the [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for tutorials on creating and managing virtual environments. 
