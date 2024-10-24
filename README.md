@@ -2,7 +2,7 @@
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 ## EpiMapper Documentation
 
-EpiMapper is a complete pipeline for data analysis of epigenomic sequencing.
+EpiMapper is a complete pipeline designed for the analysis of epigenomic sequencing data. For more information, you can refer to the [documentation](https://epimapper-pipeline.github.io/EpiMapper/)
 
 ## Download:
 Epimapper is written in Python and can be installed and accessed via the command line. It is available for both Linux and macOS. You can download this pipeline from the [EpiMapper repository](https://github.com/EpiMapper-pipeline/EpiMapper).
