@@ -108,7 +108,7 @@ install fastqc=0.12.1 MACS2=2.2.7.1 cutadapt picard=3.1.1 bowtie2=2.2.5 --yes
 ```
 
 ### 4. Package Setup
-Once the environment is ready, you can go to the [code](https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/EpiMapper) directory (folder containing setup.py) and run the following command:
+Once the environment is ready, you can go to the [EpiMapper](https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/EpiMapper) directory (folder containing setup.py) and run the following command:
 
 ```shell
 # Recommended installation method:
