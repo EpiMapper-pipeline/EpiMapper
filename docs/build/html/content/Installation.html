@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; EpiMapper  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fastqc" href="fastqc.html" />
+    <link rel="prev" title="EpiMapper" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            EpiMapper
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#remove-previous-environment">1. Remove Previous Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clean-up-old-files">2. Clean Up Old Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-new-environment">3. Set Up New Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#option-1-use-the-yml-file">Option 1: Use the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#option-2-use-requirements-txt">Option 2: Use <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#option-3-manual-installation">Option 3: Manual Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#package-setup">Package Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-demos">Run Demos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fastqc.html">fastqc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_alignment.html">bowtie2_alignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remove_duplicates.html">remove_duplicates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fragment_length.html">fragment_length</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filtering.html">filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spike_in_calibration.html">spike_in_calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peak_calling.html">peak_calling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heatmap.html">heatmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential_analysis.html">differential_analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Demos.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Required_files_and_where_to_find_them.html">Required Files and Where to Find Them</a></li>
+<li class="toctree-l1"><a class="reference internal" href="further_analysis_example.html">Further analysis - Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EpiMapper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/content/Installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#download" id="id2">Download</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id3">Installation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#remove-previous-environment" id="id4">1. Remove Previous Environment</a></p></li>
+<li><p><a class="reference internal" href="#clean-up-old-files" id="id5">2. Clean Up Old Files</a></p></li>
+<li><p><a class="reference internal" href="#set-up-new-environment" id="id6">3. Set Up New Environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#option-1-use-the-yml-file" id="id7">Option 1: Use the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> File</a></p></li>
+<li><p><a class="reference internal" href="#option-2-use-requirements-txt" id="id8">Option 2: Use <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></p></li>
+<li><p><a class="reference internal" href="#option-3-manual-installation" id="id9">Option 3: Manual Installation</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#package-setup" id="id10">Package Setup</a></p></li>
+<li><p><a class="reference internal" href="#run-demos" id="id11">Run Demos</a></p></li>
+</ul>
+</nav>
+<section id="download">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Download</a><a class="headerlink" href="#download" title="Link to this heading"></a></h2>
+<p>Epimapper is written in Python and can be installed and accessed via the command line. It is available for both Linux and macOS.
+The package can be downloaded from the  <a class="reference external" href="https://github.com/EpiMapper-pipeline/EpiMapper">EpiMapper GitHub page</a>.</p>
+</section>
+<section id="id1">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Installation</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts.
+We recommend installing and using Miniconda/Anaconda (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>). Refer to the <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">the Conda website</a>.</p>
+<p>Before the installation, you can need to add the channels to your .condarc configuration file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">channels</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioconda</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">anaconda</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+</pre></div>
+</div>
+<p>You can use the following command to add the channels:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>defaults
+$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>bioconda
+$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>anaconda
+</pre></div>
+</div>
+<p>If Miniconda is already installed, you can proceed with the following step-by-step installation.</p>
+<section id="remove-previous-environment">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">1. Remove Previous Environment</a><a class="headerlink" href="#remove-previous-environment" title="Link to this heading"></a></h3>
+<p>Before creating the new environment, remove the old one if it exists:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using mamba</span>
+$<span class="w"> </span>mamba<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>epimapper_mc<span class="w"> </span>--all<span class="w"> </span>--yes
+
+<span class="c1"># Using conda</span>
+$<span class="w"> </span>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>epimapper_mc<span class="w"> </span>--all<span class="w"> </span>--yes
+</pre></div>
+</div>
+</section>
+<section id="clean-up-old-files">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">2. Clean Up Old Files</a><a class="headerlink" href="#clean-up-old-files" title="Link to this heading"></a></h3>
+<p>Clean up old packages and caches:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using mamba</span>
+$<span class="w"> </span>mamba<span class="w"> </span>clean<span class="w"> </span>--all<span class="w"> </span>--yes
+
+<span class="c1"># Using conda</span>
+$<span class="w"> </span>conda<span class="w"> </span>clean<span class="w"> </span>--all<span class="w"> </span>--yes
+</pre></div>
+</div>
+</section>
+<section id="set-up-new-environment">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">3. Set Up New Environment</a><a class="headerlink" href="#set-up-new-environment" title="Link to this heading"></a></h3>
+<p>You can create the environment using a <code class="docutils literal notranslate"><span class="pre">.yml</span></code> file or a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.</p>
+<section id="option-1-use-the-yml-file">
+<h4><a class="toc-backref" href="#id7" role="doc-backlink">Option 1: Use the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> File</a><a class="headerlink" href="#option-1-use-the-yml-file" title="Link to this heading"></a></h4>
+<p>A YML (YAML) file is used to specify the configuration of an environment, including packages, dependencies, and channels. The YAML file for EpiMapper is as follows:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epimapper_mc</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioconda</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">anaconda</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bowtie2=2.5.4</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cutadapt=4.9</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deeptools=3.5.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bedtools=2.31.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastqc=0.12.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">macs2=2.2.7.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matplotlib=3.8.4</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy=1.23.0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openjdk=22.0.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas=1.4.4</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pathlib=1.0.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">picard=3.1.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip=24.2</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plotly=5.24.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plotnine=0.10.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.9.19</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">samtools=1.21</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scikit-learn=1.5.0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scipy=1.9.1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seaborn=0.13.0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">setuptools=75.1.0</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mizani=0.9.2</span>
+</pre></div>
+</div>
+<p>You can use the following command to create the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using mamba</span>
+$<span class="w"> </span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml<span class="w"> </span>--name<span class="w"> </span>epimapper_mc
+
+<span class="c1"># Using conda</span>
+$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml<span class="w"> </span>--name<span class="w"> </span>epimapper_mc
+</pre></div>
+</div>
+</section>
+<section id="option-2-use-requirements-txt">
+<h4><a class="toc-backref" href="#id8" role="doc-backlink">Option 2: Use <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a><a class="headerlink" href="#option-2-use-requirements-txt" title="Link to this heading"></a></h4>
+<p>Alternatively, you can create the environment first and then install dependencies using requirements.txt which only contains the list of dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Create the environment:</span>
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>epimapper_mc<span class="w"> </span>--yes
+
+<span class="c1"># 2. Activate the environment:</span>
+$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>epimapper_mc
+
+<span class="c1"># 3. Install the packages from requirements.txt:</span>
+<span class="c1">## Using mamba</span>
+$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>--insecure<span class="w"> </span>--yes<span class="w"> </span>--file<span class="w"> </span>requirements.txt
+<span class="c1">## Using conda</span>
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>--yes<span class="w"> </span>--file<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="option-3-manual-installation">
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Option 3: Manual Installation</a><a class="headerlink" href="#option-3-manual-installation" title="Link to this heading"></a></h4>
+<p>If the above methods fail, you can install the packages manually. Be sure to clean old packages and create the environment as mentioned above.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove old environment and clean up</span>
+$<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>epimapper_mc<span class="w"> </span>--all
+$<span class="w"> </span>clean<span class="w"> </span>--all<span class="w"> </span>--yes
+
+<span class="c1"># Create the environment</span>
+$<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>epimapper_mc<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9.19<span class="w"> </span>--yes
+$<span class="w"> </span>activate<span class="w"> </span>epimapper_mc
+
+<span class="c1"># Install required packages</span>
+$<span class="w"> </span>install<span class="w"> </span><span class="nv">samtools</span><span class="o">=</span><span class="m">1</span>.6<span class="w"> </span><span class="nv">deeptools</span><span class="o">=</span><span class="m">3</span>.5.1<span class="w"> </span><span class="nv">bedtools</span><span class="o">=</span><span class="m">2</span>.31.1<span class="w"> </span>--yes
+$<span class="w"> </span>install<span class="w"> </span><span class="nv">seaborn</span><span class="o">=</span><span class="m">0</span>.13.0<span class="w"> </span><span class="nv">setuptools</span><span class="o">=</span><span class="m">69</span>.5.1<span class="w"> </span>argparse<span class="w"> </span><span class="nv">pandas</span><span class="o">=</span><span class="m">1</span>.4.4<span class="w"> </span><span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.23.0<span class="w"> </span><span class="nv">matplotlib</span><span class="o">=</span><span class="m">3</span>.8.4<span class="w"> </span>--yes
+$<span class="w"> </span>install<span class="w"> </span><span class="nv">plotnine</span><span class="o">=</span><span class="m">0</span>.10.1<span class="w"> </span><span class="nv">scipy</span><span class="o">=</span><span class="m">1</span>.9.1<span class="w"> </span><span class="nv">pathlib</span><span class="o">=</span><span class="m">1</span>.0.1<span class="w"> </span>scikit-learn<span class="o">=</span><span class="m">1</span>.5.0<span class="w"> </span><span class="nv">openjdk</span><span class="o">=</span><span class="m">22</span>.0.1<span class="w"> </span>--yes
+$<span class="w"> </span>install<span class="w"> </span><span class="nv">fastqc</span><span class="o">=</span><span class="m">0</span>.12.1<span class="w"> </span><span class="nv">MACS2</span><span class="o">=</span><span class="m">2</span>.2.7.1<span class="w"> </span>cutadapt<span class="w"> </span><span class="nv">picard</span><span class="o">=</span><span class="m">3</span>.1.1<span class="w"> </span><span class="nv">bowtie2</span><span class="o">=</span><span class="m">2</span>.2.5<span class="w"> </span>--yes
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="package-setup">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Package Setup</a><a class="headerlink" href="#package-setup" title="Link to this heading"></a></h2>
+<p>Once the environment is ready, navigate to the <code class="docutils literal notranslate"><span class="pre">code</span></code> directory (folder containing setup.py) and run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recommended installation method:</span>
+$<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>.
+
+<span class="c1"># Alternatively:</span>
+$<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
+</pre></div>
+</div>
+<p>After this you should be ready to use EpiMapper Python package. You may try to see if everything is ready by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>epimapper<span class="w"> </span>-h
+</pre></div>
+</div>
+<p>The output should be something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage:<span class="w"> </span>epimapper<span class="w"> </span>&lt;task&gt;<span class="w"> </span><span class="o">[</span>&lt;args&gt;<span class="o">]</span>
+
+Tasks<span class="w"> </span>available<span class="w"> </span><span class="k">for</span><span class="w"> </span>using:
+
+fastqc<span class="w">                      </span>Quality<span class="w"> </span>control<span class="w"> </span><span class="k">for</span><span class="w"> </span>raw<span class="w"> </span>reads<span class="w"> </span><span class="k">in</span><span class="w"> </span>fastq<span class="w"> </span>files
+
+bowtie2_alignment<span class="w">           </span>Alignment<span class="w"> </span>of<span class="w"> </span>fastq<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>reference<span class="w"> </span>genome
+
+remove_duplicates<span class="w">           </span>Removes<span class="w"> </span>duplicated<span class="w"> </span>reads
+
+fragment_length<span class="w">             </span>Finds<span class="w"> </span>and<span class="w"> </span>plots<span class="w"> </span>fragment<span class="w"> </span>lengths<span class="w"> </span><span class="k">in</span><span class="w"> </span>sam<span class="w"> </span>files
+
+filtering<span class="w">                   </span>Filters<span class="w"> </span>and<span class="w"> </span>converts<span class="w"> </span>files<span class="w"> </span>from<span class="w"> </span>bam<span class="w"> </span>to<span class="w"> </span>bed
+
+spike_in_calibration<span class="w">        </span>Spike<span class="w"> </span><span class="k">in</span><span class="w"> </span>normalizes<span class="w"> </span>input<span class="w"> </span>files
+
+peak_calling<span class="w">                </span>Calls<span class="w"> </span><span class="k">for</span><span class="w"> </span>enriched<span class="w"> </span>regiones<span class="w"> </span><span class="k">in</span><span class="w"> </span>bed<span class="w"> </span>files
+
+heatmap<span class="w">                     </span>Plots<span class="w"> </span>heatmaps<span class="w"> </span>of<span class="w"> </span>enriched<span class="w"> </span>regions
+
+differential_analysis<span class="w">       </span>Preforms<span class="w"> </span>differential<span class="w"> </span>analysis<span class="w"> </span>on<span class="w"> </span>input<span class="w"> </span>bed<span class="w"> </span>files
+
+Python<span class="w"> </span>Package<span class="w"> </span><span class="k">for</span><span class="w"> </span>analysing<span class="w"> </span>epigenetic<span class="w"> </span>data<span class="w"> </span>such<span class="w"> </span>as<span class="w"> </span>ChIP-seq,<span class="w"> </span>CUT<span class="p">&amp;</span>RUN,<span class="w"> </span>ATAC-seq<span class="w"> </span>and<span class="w"> </span>CUT<span class="p">&amp;</span>Tag
+
+positional<span class="w"> </span>arguments:
+task<span class="w">        </span>Pipeline<span class="w"> </span>task<span class="w"> </span>to<span class="w"> </span>run
+
+optional<span class="w"> </span>arguments:
+-h,<span class="w"> </span>--help<span class="w">  </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+</pre></div>
+</div>
+</section>
+<section id="run-demos">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Run Demos</a><a class="headerlink" href="#run-demos" title="Link to this heading"></a></h2>
+<p>There are currently two demos avalible for using the EpiMapper Python package, one for CUT&amp;Tag data and one for ATAC-seq data.
+Demo data can be found in the <a class="reference external" href="https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/demos">demos</a> folder. For more details, refer to the <a class="reference external" href="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/demos/demo.md">demo.md</a>.
+Ensure that you create the output folder before running the demos.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Navigate to the demo directory:</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>../demos/demo_histone/
+
+<span class="c1"># Run the demo script:</span>
+$<span class="w"> </span>./demo_histone.sh
+
+<span class="c1"># Navigate to the demo directory for ATAC-seq data:</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>../demos/demo_atac/
+
+<span class="c1"># Run the demo script:</span>
+$<span class="w"> </span>./demo_atac.sh
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="EpiMapper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fastqc.html" class="btn btn-neutral float-right" title="fastqc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jenny Sofie Dragland &amp; Junbai Wang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
