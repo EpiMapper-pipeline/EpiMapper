@@ -1,7 +1,7 @@
 
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 
-<div style="display: flex; align-items: center; gap: 30px; padding: 20px;">
+<div style="display: flex; align-items: center; gap: 100px; padding: 20px;">
     <a href="https://www.oslo-universitetssykehus.no/">
         <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/oslo-universitetssykehus_neg.png" 
              alt="ous.png" height="25" />
