@@ -3,16 +3,16 @@
 
 <div style="display: flex; align-items: center;">
     <a href="https://www.oslo-universitetssykehus.no/">
-    	<img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/oslo-universitetssykehus_neg.png" alt="ous.png" height="25" style="margin: 20px;" />
+    	<img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/oslo-universitetssykehus_neg.png" alt="ous.png" height="25" style="margin: 30px;" />
     </a>
     <a href="https://www.uio.no/">
-    	<img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/uio_neg.png" alt="uio.png" height="25" style="margin: 20px;"/>
+    	<img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/uio_neg_modify.png" alt="uio.png" height="25" style="margin: 30px;"/>
 	</a>
     <a href="https://www.helse-sorost.no/">
-        <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/helse-sor-ost_neg.png" alt="helse-sor-ost.png" height="25" style="margin: 20px;" />
+        <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/helse-sor-ost_neg.png" alt="helse-sor-ost.png" height="25" style="margin: 30px;" />
     </a>
     <a href="https://www.ahus.no/">
-        <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/akershus-universitetssykehus_neg.png" alt="ahhus.png" height="25" style="margin: 20px;" />
+        <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/akershus-universitetssykehus_neg.png" alt="ahhus.png" height="25" style="margin: 30px;" />
     </a>
 </div>
 
