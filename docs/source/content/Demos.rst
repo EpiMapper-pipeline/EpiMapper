@@ -71,18 +71,10 @@ The script to run the demo is shown below:
 
 **Example Plot**: After running ``fragment_length``, the fragment length distribution plot (Figure 1 and Figure 2) appears as follows:
 
-.. figure:: ../content/figures/Fragment_length_lineplot_histone.png
-    :alt: Linepot Fragment Length
+.. figure:: ../content/figures/fragment_length_histone.png
+    :alt: ViolinPlot Fragment Length
     :align: center
-
-    **Figure 1**: Example Linepot of Fragment Length Distribution
-
-.. figure:: ../content/figures/Fragment_length_violin_histone.png
-    :alt: ViolinePlot Fragment Length
-    :align: center
-    :width: 75%
-
-    **Figure 2**: Example ViolinePlot Fragment Length Distribution
+    :width: 100%
 
 .. code-block:: bash
 
@@ -106,14 +98,12 @@ The script to run the demo is shown below:
     epimapper heatmap -b out/Epimapper/alignment/bam  -p out/Epimapper/peakCalling/seacr/control \
     -bl in/blacklist.bed -r in/hg38.refFlat.txt  -o out
 
-**Example Plot**: After running ``heatmap``, the heatmap of histone enrichment around genes (Figure 3) appears as follows:
+**Example Plot**: After running ``heatmap``, the heatmap of histone enrichment around genes (Figure 3 and Figure 4) appears as follows. Figure 4 is a composite heatmap constructed from individual peak heatmaps of single samples, represented as a single image in the original file.
 
-.. figure:: ../content/figures/matrix_heatmap_histone.png
+.. figure:: ../content/figures/heatmap_histone.png
     :alt: Heatmap
     :align: center
-    :width: 50%
-
-    **Figure 3**: Example Heatmap of histone enrichment around genes.
+    :width: 100%
 
 .. code-block:: bash
 

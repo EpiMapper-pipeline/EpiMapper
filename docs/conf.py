@@ -44,4 +44,3 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
-

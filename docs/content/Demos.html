@@ -191,18 +191,9 @@ epimapper<span class="w"> </span>fragment_length<span class="w"> </span>-s<span 
 </pre></div>
 </div>
 <p><strong>Example Plot</strong>: After running <code class="docutils literal notranslate"><span class="pre">fragment_length</span></code>, the fragment length distribution plot (Figure 1 and Figure 2) appears as follows:</p>
-<figure class="align-center" id="id2">
-<img alt="Linepot Fragment Length" src="../_images/Fragment_length_lineplot_histone.png" />
-<figcaption>
-<p><span class="caption-text"><strong>Figure 1</strong>: Example Linepot of Fragment Length Distribution</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/Fragment_length_violin_histone.png"><img alt="ViolinePlot Fragment Length" src="../_images/Fragment_length_violin_histone.png" style="width: 75%;" />
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fragment_length_histone.png"><img alt="ViolinPlot Fragment Length" src="../_images/fragment_length_histone.png" style="width: 100%;" />
 </a>
-<figcaption>
-<p><span class="caption-text"><strong>Figure 2</strong>: Example ViolinePlot Fragment Length Distribution</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
-</figcaption>
 </figure>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. filtering</span>
 
@@ -225,13 +216,10 @@ epimapper<span class="w"> </span>heatmap<span class="w"> </span>-b<span class="w
 -bl<span class="w"> </span><span class="k">in</span>/blacklist.bed<span class="w"> </span>-r<span class="w"> </span><span class="k">in</span>/hg38.refFlat.txt<span class="w">  </span>-o<span class="w"> </span>out
 </pre></div>
 </div>
-<p><strong>Example Plot</strong>: After running <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, the heatmap of histone enrichment around genes (Figure 3) appears as follows:</p>
-<figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../_images/matrix_heatmap_histone.png"><img alt="Heatmap" src="../_images/matrix_heatmap_histone.png" style="width: 50%;" />
+<p><strong>Example Plot</strong>: After running <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, the heatmap of histone enrichment around genes (Figure 3 and Figure 4) appears as follows. Figure 4 is a composite heatmap constructed from individual peak heatmaps of single samples, represented as a single image in the original file.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/heatmap_histone.png"><img alt="Heatmap" src="../_images/heatmap_histone.png" style="width: 100%;" />
 </a>
-<figcaption>
-<p><span class="caption-text"><strong>Figure 3</strong>: Example Heatmap of histone enrichment around genes.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
-</figcaption>
 </figure>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. differential_analysis</span>
 
