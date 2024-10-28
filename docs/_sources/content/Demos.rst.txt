@@ -41,13 +41,50 @@ The script to run the demo is shown below:
 
     epimapper bowtie2_alignment -f fastq -s True -i in/bowtie2_index_ecoli -m True -o out
 
+**Example table**: After running ``bowtie2_alignment``, the result (Table 1) appears as follows:
+
+.. table:: Table 1: Example bowtie2_alignment_ref_and_spike_in
+   :widths: auto
+   :align: center
+   :class: my-custom-class
+
+   ==========  ===========   ===============  ===============  =============  =======================  =====================
+   Sample      Replication   SequencingDepth  MappedFragments  AlignmentRate  MappedFragments_SpikeIn  AlignmentRate_SpikeIn
+   ==========  ===========   ===============  ===============  =============  =======================  =====================
+   d-H3K27me3  rep1          729951           729478           99.94%         473                      0.06%
+   d-H3K27me3  rep2          695765           695534           99.97%         231                      0.03%
+   d-H3K4me3   rep1          358119           357764           99.9%          355                      0.1%
+   d-H3K4me3   rep2          472641           468294           99.08%         4347                     0.92%
+   d-IgG       rep1          134669           59177            43.94%         75492                    56.06%
+   d-IgG       rep2          603373           482561           79.98%         120812                   20.02%
+   ==========  ===========   ===============  ===============  =============  =======================  =====================
+
+.. code-block:: bash
+
     # 3. remove_duplicates
 
     epimapper remove_duplicates -s out/Epimapper/alignment/sam -o out
 
     # 4. fragment_length
 
-    #epimapper fragment_length -s out/Epimapper/alignment/removeDuplicate/sam_duplicates_removed -o out
+    epimapper fragment_length -s out/Epimapper/alignment/removeDuplicate/sam_duplicates_removed -o out
+
+**Example Plot**: After running ``fragment_length``, the fragment length distribution plot (Figure 1 and Figure 2) appears as follows:
+
+.. figure:: ../content/figures/Fragment_length_lineplot_histone.png
+    :alt: Linepot Fragment Length
+    :align: center
+
+    **Figure 1**: Example Linepot of Fragment Length Distribution
+
+.. figure:: ../content/figures/Fragment_length_violin_histone.png
+    :alt: ViolinePlot Fragment Length
+    :align: center
+    :width: 75%
+
+    **Figure 2**: Example ViolinePlot Fragment Length Distribution
+
+.. code-block:: bash
 
     # 5. filtering
 
@@ -68,6 +105,17 @@ The script to run the demo is shown below:
 
     epimapper heatmap -b out/Epimapper/alignment/bam  -p out/Epimapper/peakCalling/seacr/control \
     -bl in/blacklist.bed -r in/hg38.refFlat.txt  -o out
+
+**Example Plot**: After running ``heatmap``, the heatmap of histone enrichment around genes (Figure 3) appears as follows:
+
+.. figure:: ../content/figures/matrix_heatmap_histone.png
+    :alt: Heatmap
+    :align: center
+    :width: 50%
+
+    **Figure 3**: Example Heatmap of histone enrichment around genes.
+
+.. code-block:: bash
 
     # 9. differential_analysis
 
