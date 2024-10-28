@@ -71,7 +71,7 @@ The script to run the demo is shown below:
 
 **Example Plot**: After running ``fragment_length``, the fragment length distribution plot (Figure 1 and Figure 2) appears as follows:
 
-.. figure:: ../content/figures/fragment_length_histone.png
+.. figure:: ../content/figures/fragment_histone.png
     :alt: ViolinPlot Fragment Length
     :align: center
     :width: 100%

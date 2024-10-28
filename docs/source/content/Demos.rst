@@ -71,8 +71,8 @@ The script to run the demo is shown below:
 
 **Example Plot**: After running ``fragment_length``, the fragment length distribution plot (Figure 1 and Figure 2) appears as follows:
 
-.. figure:: ../content/figures/fragment_length_histone.png
-    :alt: ViolinPlot Fragment Length
+.. figure:: ../content/figures/fragment_histone.png
+    :alt: Histone Fragment Length
     :align: center
     :width: 100%
 
@@ -101,7 +101,7 @@ The script to run the demo is shown below:
 **Example Plot**: After running ``heatmap``, the heatmap of histone enrichment around genes (Figure 3 and Figure 4) appears as follows. Figure 4 is a composite heatmap constructed from individual peak heatmaps of single samples, represented as a single image in the original file.
 
 .. figure:: ../content/figures/heatmap_histone.png
-    :alt: Heatmap
+    :alt: Histone Heatmap
     :align: center
     :width: 100%
 
@@ -171,7 +171,6 @@ The script to run the demo is shown below:
 
     epimapper heatmap -b out/Epimapper/alignment/bam -bl in/hg19-blacklist_sorted.bed \
     -p out/Epimapper/peakCalling/macs2/top_peaks -r in/hg19.refFlat_chr21.txt -o /Users/eier/Documents/demo/ATAC/out
-
 
     #8. differntial_analysis 
 
