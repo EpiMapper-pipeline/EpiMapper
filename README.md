@@ -12,7 +12,7 @@
         <img src="docs/source/content/figures/akershus-universitetssykehus_neg.png" height="25" />
     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://www.uio.no/">
-        <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/uio_neg_modify.png" alt="uio.png" height="30" />
+        <img src="docs/source/content/figures/uio_neg_modify.png" alt="" height="30" />
     </a>
 </div>
 
