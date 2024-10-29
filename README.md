@@ -2,14 +2,15 @@
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 
 <div align="center">
-        <a href="https://www.oslo-universitetssykehus.no/" >![Foo](docs/source/content/figures/oslo-universitetssykehus_neg.png)</a>
-	
+
     <a href="https://www.helse-sorost.no/">
         <img src="docs/source/content/figures/helse-sor-ost_neg.png" height="25" >
     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
     <a href="https://www.ahus.no/">
         <img src="docs/source/content/figures/akershus-universitetssykehus_neg.png" height="25" />
     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
     <a href="https://www.uio.no/">
         <img src="docs/source/content/figures/uio_neg_modify.png"  height="10" />
     </a>
