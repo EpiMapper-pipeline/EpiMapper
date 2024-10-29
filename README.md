@@ -7,7 +7,7 @@
     </a>;
     
     <a href="https://www.ahus.no/">
-        <img src="docs/source/content/figures/akershus-universitetssykehus_neg.png" height="25" />
+        <img src="docs/source/content/figures/ahhus.png" height="25" />
     </a>;
     
     <a href="https://www.uio.no/">
