@@ -4,14 +4,12 @@
 <div align="center">
     <a href="https://www.helse-sorost.no/">
         <img src="docs/source/content/figures/helse-sor-ost.jpg" height="25"/ >
-    </a>;
-    
+    </a>
     <a href="https://www.ahus.no/">
         <img src="docs/source/content/figures/ahhus.png" height="25" />
-    </a>;
-    
+    </a>
     <a href="https://www.uio.no/">
-        <img src="docs/source/content/figures/uio_neg_modify.png"  height="25" />
+        <img src="docs/source/content/figures/uio_segl_a.png"  height="25" />
     </a>
 </div>
 
