@@ -2,7 +2,7 @@
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 
 <div align="center">
-    ![https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/docs/source/content/figures/helse-sor-ost_neg.png](https://www.helse-sorost.no/)
+    ![https://github.com/EpiMapper-pipeline/EpiMapper/tree/main/docs/source/content/figures/helse-sor-ost.jpg](https://www.helse-sorost.no/)
 	
     <a href="https://www.helse-sorost.no/">
         <img src="docs/source/content/figures/helse-sor-ost_neg.png" height="25"/ >
