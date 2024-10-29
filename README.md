@@ -3,16 +3,16 @@
 
 <div align="center">
     <a href="https://ous-research.no/">
-        <img src="docs/source/content/figures/oslo-universitetssykehus-ous-logo.png" height="35"/ >
+        <img src="docs/source/content/figures/oslo-universitetssykehus-ous-logo.png" height="40"/ >
     </a>
     <a href="https://www.helse-sorost.no/">
-        <img src="docs/source/content/figures/helse-sor-ost.jpg" height="35"/ >
+        <img src="docs/source/content/figures/helse-sor-ost.jpg" height="40"/ >
     </a>
     <a href="https://www.ahus.no/">
-        <img src="docs/source/content/figures/ahhus.png" height="35" />
+        <img src="docs/source/content/figures/ahhus.png" height="40" />
     </a>
     <a href="https://www.uio.no/">
-        <img src="docs/source/content/figures/uio_segl_a.png"  height="35" />
+        <img src="docs/source/content/figures/uio_segl_a.png"  height="40" />
     </a>
 </div>
 
