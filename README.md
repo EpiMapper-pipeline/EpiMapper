@@ -4,7 +4,7 @@
 <div align="center">
 
     <a href="https://www.helse-sorost.no/">
-        <img src="docs/source/content/figures/helse-sor-ost_neg.png" height="25" >
+        <img src="docs/source/content/figures/helse-sor-ost_neg.png" height="25"/ >
     </a>
     
     <a href="https://www.ahus.no/">
