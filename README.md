@@ -2,6 +2,9 @@
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 
 <div align="center">
+    <a href="https://ous-research.no/">
+        <img src="docs/source/content/figures/oslo-universitetssykehus-ous-logo.png" height="25"/ >
+    </a>
     <a href="https://www.helse-sorost.no/">
         <img src="docs/source/content/figures/helse-sor-ost.jpg" height="25"/ >
     </a>
