@@ -1,4 +1,3 @@
-
 # EpiMapper: A New Tool for Analyzing High-Throughput Sequencing from CUT&Tag
 
 <div align="center">
