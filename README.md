@@ -3,7 +3,7 @@
 
 <div align="center">
     <a href="https://www.oslo-universitetssykehus.no/">
-        <img src="docs/source/content/figures/oslo-universitetssykehus_neg.png" height="15" />
+        <img src="docs/source/content/figures/oslo-universitetssykehus_neg.png" height="55" />
     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://www.helse-sorost.no/">
         <img src="https://github.com/EpiMapper-pipeline/EpiMapper/blob/main/docs/source/content/figures/helse-sor-ost_neg.png" alt="helse-sor-ost.png" height="25" />
