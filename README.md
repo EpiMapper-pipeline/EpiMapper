@@ -19,7 +19,9 @@
 
 The figure below illustrates the workflow of EpiMapper, detailing each step of the process from various experimental input data to final analysis. This flowchart provides a clear view of how EpiMapper analyzes epigenomic data to derive insights.
 
-<img src="docs/source/content/figures/graphical_illustration.jpg" alt="" width="500">
+<div align="center">
+    <img src="docs/source/content/figures/graphical_illustration.jpg" alt="illustration" width="800">
+</div>
 
 ## EpiMapper Documentation
 
