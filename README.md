@@ -23,6 +23,13 @@ The figure below illustrates the workflow of EpiMapper, detailing each step of t
     <img src="docs/source/content/figures/graphical_illustration.jpg" alt="illustration" width="800">
 </div>
 
+## EpiMapper publication
+[EpiMapper: A new tool for analyzing high-throughput sequencing from CUT&Tag.](https://www.sciencedirect.com/science/article/pii/S0010482525000423?via%3Dihub)
+
+Dragland JS, Liu G, Nilsen HL, Böttcher Y, Wang J. 
+
+Comput Biol Med. 2025 Mar;186:109692. doi: 10.1016/j.compbiomed.2025.109692. 
+
 ## EpiMapper Documentation
 
 EpiMapper is a complete pipeline designed for the analysis of epigenomic sequencing data. For more information, you can refer to the [documentation](https://epimapper-pipeline.github.io/EpiMapper/)
