@@ -372,8 +372,11 @@ def map_bg_window(bedgraph, bdg_files, diff_dir, chromosome_sizes, LEN, list_a, 
             
             
     sorted_bdg_files = glob.glob(os.path.join(bedgraph, "*_sorted.bedgraph"))
-    
-    
+    #added jbw may 2026
+	if len(sorted_bdg_files)<1:
+		sorted_bdg_files=glob.glob(os.path.join(bedgraph, "*_sorted.bdg"))
+    #end added
+
     for file in sorted_bdg_files:
         
     
@@ -882,8 +885,12 @@ def check_input(args):
         if os.path.exists(bedgraph):
              b_files =glob.glob(os.path.join(bedgraph, "*.fragments*.bedgraph"))
              if len(b_files) <1:
-                 print("Chosen bedgraph directory: "+bedgraph+" is empty or does not contain any bedgraph files. \nPlease check your directory or select another one.")
-                 exit(1)
+				 #added jbw 2026 for other bdg export files!!
+				 b_files= glob.glob(os.path.join(bedgraph, "*_sorted.bdg"))
+                 if len(b_files) <1:
+					#end add
+			        print("Chosen bedgraph directory: "+bedgraph+" is empty or does not contain any bedgraph files. \nPlease check your directory or select another one.")
+                    exit(1)
         else:
              print("Chosen bedgraph directory: "+bedgraph+" does not exist. \nPlease select check your path or select another one")
              exit(1)
