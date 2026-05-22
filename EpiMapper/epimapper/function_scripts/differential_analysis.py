@@ -115,6 +115,9 @@ def set_parser(parser):
     #test jbw
     #optional_name.add_argument("-n", "--normalize", required=False, type = bool, default = False, help="Whether to normlaize input reads, default= False")
     optional_name.add_argument("-n", "--normalize", required=False, type =str, default = None , help="Whether to normlaize input reads, default= None, use True if need to normalize the data")
+    #jbw 2026 may for data input
+    optional_name.add_argument("-iD","--input_data", required=False, type=str, default= None, help="Is input data available ? default = None, use True if want to skip load input data but do DAR directly")
+    #end add
 
 
     optional_name.add_argument("-X",
@@ -1111,33 +1114,42 @@ def run(args):
         enhancer = args.enhancer
     else: 
         enhancer = False
-        
-    blacklist_bin_file = make_100_windows(chromosome_sizes, genome_blacklist, LEN, diff_dir)
 
-    make_master_peak(peak_files, diff_dir, out_combined_files, searchStr1, searchStr2)
-    if args.fold_enrichment: 
-        print('Use fold enrichment') 
-        combine_signal_enrichment(peak_dir, blacklist_bin_file, chromosome_sizes, out_combined_files, searchStr1,searchStr2)
-       #test jbw 23.06 
-    elif bedgraph is not None:
-        #jbw 2024
-        print('Use bedgraph file')
-        bdg_files = glob.glob(os.path.join(bedgraph, "*.fragments*.bedgraph"))
-        map_bg_window(bedgraph, bdg_files, diff_dir, chromosome_sizes, LEN, searchStr1, searchStr2)      
-        combine_windows(diff_dir, out_combined_files)
-    else:
-        print("Neither folder_enrichment nor bedgraph directory selected. \nPlease provide the path to a directory containing bedgraph files in the -bg parameter or use True for folder_enrichment")
-        exit(1)
-    #end test
+	#do preprocess of input data
+    #added jbw 2026 may
+    if args.input_data == None:
+      print("Preprocess of input data: ")
+      blacklist_bin_file = make_100_windows(chromosome_sizes, genome_blacklist, LEN, diff_dir)
 
-    #jbw 2024
-    if normalize:
-        print('Normalize input data')
-        do_normalization(out_combined_files)
-    else:
-        print('Do not normalize input data')
+      make_master_peak(peak_files, diff_dir, out_combined_files, searchStr1, searchStr2)
+      if args.fold_enrichment: 
+          print('Use fold enrichment') 
+          combine_signal_enrichment(peak_dir, blacklist_bin_file, chromosome_sizes, out_combined_files, searchStr1,searchStr2)
+         #test jbw 23.06 
+      elif bedgraph is not None:
+          #jbw 2024
+          print('Use bedgraph file')
+          bdg_files = glob.glob(os.path.join(bedgraph, "*.fragments*.bedgraph"))
+          map_bg_window(bedgraph, bdg_files, diff_dir, chromosome_sizes, LEN, searchStr1, searchStr2)      
+          combine_windows(diff_dir, out_combined_files)
+      else:
+          print("Neither folder_enrichment nor bedgraph directory selected. \nPlease provide the path to a directory containing bedgraph files in the -bg parameter or use True for folder_enrichment")
+          exit(1)
+      #end test
+
+      #jbw 2024
+      if normalize:
+          print('Normalize input data')
+          do_normalization(out_combined_files)
+      else:
+          print('Do not normalize input data')
     
-    map_peaks_in_wind(out_combined_files, normalize)
+      map_peaks_in_wind(out_combined_files, normalize)
+    else:
+      print("Skip preprocess of input data such as make bin files, filter blacklist bins, make master peaks, map bdg to bins, normalization, map peaks to bins ... ")
+      print("Start to do differential peak analysis directly ! ")
+    #end add
+
     # 22.08 lgg 
     test_methods = args.test_methods
     
