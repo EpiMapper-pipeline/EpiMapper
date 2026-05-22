@@ -294,12 +294,25 @@ def make_master_peak(peak_files, diff_dir, out_combined_files, list_a, list_b):
     out_file=os.path.join(out_combined_files, "combined_peaks.bed")
     
     sorted_masterpeak.to_csv(out_file,sep='\t',index=False,header=None)
-    
+
+	#add 2026 this combined_peaks_merged.bed also be generated in combine_signal_enrichment() 
     out_file2= out_file.replace('.bed','_merged.bed') 
     
     cmd3 = "bedtools merge  -c 4  -o collapse -i " + out_file+ " > "+ out_file2
     
     out3 = subprocess.run(cmd3,shell=True)
+
+	#add jbw 2026 to generate ids for combined_peaks_merged
+    #merged_peaks='out/Epimapper/differential_analysis/out_combined_files/combined_peaks_merged.bed'
+    #
+    tmp_df=pd.read_csv(out_file2,sep='\t',header=None)
+    tmp_df[4]= ['id_'+str(i) for i in range(1,tmp_df.shape[0]+1)]
+    #export new merged file and its ids
+    tmp_df.to_csv(out_file2,sep='\t',index=False,header=None)
+    merged_peaks_id=merged_peaks.replace('peaks_merged.bed','peaks_merged_id.bed')
+    tmp_df[[0, 1 ,2 ,4]].to_csv(merged_peaks_id,sep='\t',index=False, header=None)
+    #end add
+
     if out_sort.returncode==0 and out3.returncode==0:
         print("Done with - Making master peak")
     else:
@@ -507,7 +520,9 @@ def quantile_normalization(df_input):
 def combine_signal_enrichment(peaks_folder,blacklist_removed_bin, chromosome_sizes, out_combined_files, searchStr1,searchStr2):
     #jbw 2024 
     enrichment_main(peaks_folder,blacklist_removed_bin, chromosome_sizes, out_combined_files, searchStr1,searchStr2)
-    
+
+    #jbw 2026
+    #this combined_peaks_merged.bed file also be generatd in make_master_peak()
     merged_peaks = os.path.join(out_combined_files, "combined_peaks_merged.bed")
     
     rm_y = "grep -v ^chrY " + merged_peaks+ " > " +merged_peaks.replace(".bed", "_cleaned.bed")
@@ -519,7 +534,17 @@ def combine_signal_enrichment(peaks_folder,blacklist_removed_bin, chromosome_siz
     rm = "rm " + merged_peaks.replace(".bed", "_cleaned.bed")
     subprocess.run(rm,shell=True)
     
-    
+    #add jbw 2026 to generate ids for combined_peaks_merged
+    #merged_peaks='out/Epimapper/differential_analysis/out_combined_files/combined_peaks_merged.bed'
+    #
+    tmp_df=pd.read_csv(merged_peaks,sep='\t',header=None)
+    tmp_df[4]= ['id_'+str(i) for i in range(1,tmp_df.shape[0]+1)]
+    #export new merged file and its ids
+    tmp_df.to_csv(merged_peaks,sep='\t',index=False,header=None)
+    merged_peaks_id=merged_peaks.replace('peaks_merged.bed','peaks_merged_id.bed')
+    tmp_df[[0, 1 ,2 ,4]].to_csv(merged_peaks_id,sep='\t',index=False, header=None)
+    #end add
+
     return
 
 
@@ -583,9 +608,13 @@ def map_peaks_in_wind(out_combined_files, normalize):
         combined_signals  = os.path.join(out_combined_files, "combined_signals_100b_quantLog.bed.gz")
     else:
         combined_signals = os.path.join(out_combined_files, "combined_signals_100b.bed.gz")
-        
-    combined_peaks = os.path.join(out_combined_files, "combined_peaks_merged.bed")
-    
+
+    #added jbw 2026 may change to id file for saving space
+    #out_combined_files='out/Epimapper/differential_analysis/out_combined_files'
+    #
+    #combined_peaks = os.path.join(out_combined_files, "combined_peaks_merged.bed")
+    combined_peaks = os.path.join(out_combined_files, "combined_peaks_merged_id.bed")
+
     combined_signals_unzip = combined_signals.split(".gz")[0]
     
     cmd1 = "gunzip " + combined_signals
@@ -636,21 +665,29 @@ def do_dar_analysis(diff_dir, searchStr1, searchStr2, out_combined_files,cutoff,
     in_ar_file= os.path.join(out_combined_files,"combined_peaks_merged.bed")
     
     in_ar_head_file=os.path.join(out_combined_files, "combined_signals_100b.head")
-    
+
+    #2026
+    print("Read merged peaks ... ")
     tmp_peakSignal_df=pd.read_csv(in_peak_mapped_signal_file,sep='\t',header=None,compression='gzip')
     #
     #remove rows with empy value such as . 
     total_sample_size=len(searchStr1) + len(searchStr2)
-    
+
+    #2026
+    print("Check missing values in data ...")
     #check missing values in rows
     is_NAN=tmp_peakSignal_df.iloc[:,-total_sample_size:]=='.'
     
     row_has_NAN=is_NAN.any(axis=1)
     
     in_peakSignal_df=tmp_peakSignal_df[~row_has_NAN].copy()
-    
+
+    #2026
+    print("Read combined peaks data ... ")
     in_ar_df=pd.read_csv(in_ar_file,sep='\t',header=None)
-    
+
+    #2026
+    print("Read combined peaks head ... ")
     in_ar_head_df=pd.read_csv(in_ar_head_file,sep='\t')
     #
     #make new id name
@@ -659,8 +696,12 @@ def do_dar_analysis(diff_dir, searchStr1, searchStr2, out_combined_files,cutoff,
     in_peakSignal_df=in_peakSignal_df.replace('.',0).copy()
     #
     #DAR finding
+    #2026
+    print("Find column names index")
     tmp_xStr1_idx, tmp_yStr2_idx =find_col_index4sample(in_ar_head_df, searchStr1, searchStr2)
-    
+
+    #2026
+    print("Start to do DAR ...")
     out_all_pval, out_passed_pval = parallel_do_DAR((num_of_process,in_ar_df,in_peakSignal_df,tmp_xStr1_idx,tmp_yStr2_idx,test_methods))
     #
     out_all_df=pd.DataFrame.from_dict(out_all_pval,orient='index')
