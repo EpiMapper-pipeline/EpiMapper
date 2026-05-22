@@ -1191,14 +1191,18 @@ def run(args):
           do_normalization(out_combined_files)
       else:
           print('Do not normalize input data')
-    
-      map_peaks_in_wind(out_combined_files, normalize)
+      #
+	  #changed jbw 2026
+      #map_peaks_in_wind(out_combined_files, normalize)
     else:
       print("Skip preprocess of input data such as make bin files, filter blacklist bins, make master peaks, map bdg to bins, normalization, map peaks to bins ... ")
       print("Start to do differential peak analysis directly ! ")
     #end add
 
     # 22.08 lgg 
+	#add jbw 2026
+	print("Map peaks to window bins ... ")
+	map_peaks_in_wind(out_combined_files, normalize)
     test_methods = args.test_methods
     
     do_dar_analysis(diff_dir, searchStr1, searchStr2, out_combined_files,cutoff,test_methods)
