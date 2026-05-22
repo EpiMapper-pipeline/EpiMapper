@@ -309,7 +309,7 @@ def make_master_peak(peak_files, diff_dir, out_combined_files, list_a, list_b):
     tmp_df[4]= ['id_'+str(i) for i in range(1,tmp_df.shape[0]+1)]
     #export new merged file and its ids
     tmp_df.to_csv(out_file2,sep='\t',index=False,header=None)
-    merged_peaks_id=merged_peaks.replace('peaks_merged.bed','peaks_merged_id.bed')
+    merged_peaks_id=out_file2.replace('peaks_merged.bed','peaks_merged_id.bed')
     tmp_df[[0, 1 ,2 ,4]].to_csv(merged_peaks_id,sep='\t',index=False, header=None)
     #end add
 
