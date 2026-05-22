@@ -1156,13 +1156,18 @@ def run(args):
     else: 
         enhancer = False
 
+	#jbw 2026
+    print("Make master peaks: ")
+    make_master_peak(peak_files, diff_dir, out_combined_files, searchStr1, searchStr2)
+
 	#do preprocess of input data
     #added jbw 2026 may
     if args.input_data == None:
       print("Preprocess of input data: ")
       blacklist_bin_file = make_100_windows(chromosome_sizes, genome_blacklist, LEN, diff_dir)
 
-      make_master_peak(peak_files, diff_dir, out_combined_files, searchStr1, searchStr2)
+	  #jbw 2026
+      #make_master_peak(peak_files, diff_dir, out_combined_files, searchStr1, searchStr2)
       if args.fold_enrichment: 
           print('Use fold enrichment') 
           combine_signal_enrichment(peak_dir, blacklist_bin_file, chromosome_sizes, out_combined_files, searchStr1,searchStr2)
