@@ -748,7 +748,9 @@ def make_pvalue_format(DAR, out_combined_files,cut_off):
         
 
     """
-    in_dar_file = os.path.join(out_combined_files, "combined_peaks_merged.bed")
+	#changed jbw 2026
+    in_dar_file = os.path.join(out_combined_files, "combined_peaks_merged_id.bed")
+	#end change
     in_dar_pval_file = os.path.join(DAR, "combined_peaks_merged_pval.csv")
     pval_cutoff = cut_off
     out_file, merged_df, out_df=make_pvalue_files(in_dar_file,in_dar_pval_file,pval_cutoff)
